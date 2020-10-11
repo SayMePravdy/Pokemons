@@ -166,7 +166,6 @@ class Absorb extends SpecialMove{
 	@Override
 	protected double calcCriticalHit(Pokemon att, Pokemon def){
 		double damage = calcBaseDamage(att, def);
-		//System.out.println(damage);
 		att.setMod(Stat.HP, (int) (-2 * damage));
 		if (Math.random() <= att.getStat(Stat.SPEED) / 512)
 			return 2.0;

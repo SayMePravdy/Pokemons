@@ -8,9 +8,8 @@ public class PowderSnow extends SpecialMove{
 	}
 	@Override
 	protected void applyOppEffects(Pokemon p){
-		if (Math.random() <= 0.1){
-			Effect.freeze(p);
-		}
+		Effect e = new Effect().chance(0.1).condition(Status.FREEZE);
+		p.addEffect(e);
 	}
 	
 	@Override

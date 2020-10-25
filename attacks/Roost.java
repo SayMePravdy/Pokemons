@@ -14,7 +14,7 @@ public class Roost extends StatusMove{
 	
 	@Override
 	protected void applySelfEffects(Pokemon p){
-		if (p.getStat(Stat.HP) * 1.5 <= p.getHP()){
+		if (p.getHP() <= 0.5 * p.getStat(Stat.HP)){
 			p.setMod(Stat.HP, (int) (-0.5 * p.getStat(Stat.HP)));
 		}else
 			p.setMod(Stat.HP, (int) (p.getHP() - p.getStat(Stat.HP)));			

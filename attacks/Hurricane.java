@@ -14,6 +14,6 @@ public class Hurricane extends SpecialMove{
 	
 	@Override
 	protected String describe(){
-		return "Veter v hatu";
+		return "Bahnul Piva";
 	}
 }
